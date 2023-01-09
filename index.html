@@ -1,12 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter</title>
+  <style>
+    html,body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: aquamarine;
+        margin: 0;
+        padding: 0;
+    }
+    .content{
+        background-color: aqua;
+        padding: 5px;
+        border: 1px solid black;
+        text-align: center;
+    }
+    .flexbox{
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        max-width: 700px;
+        max-height: 300px;
+        margin-top: 100px;
+        margin-left: 10px;
+        position: relative;
+        top: 80px;
+        margin: auto;
+    }
+    .item{
+        box-sizing: border-box;
+        width: 50%;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+    .b1{
+        background-color: white;
+        width: 150px;
+        padding: 5px;
+        height: auto;
+        margin:  auto;
+        margin-top: 10px;
+    }
+    header{
+        background-color: lightblue;
+        padding: 30p;
+        text-align: center;
+    }
+    header.hide{
+        height: -51;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 99;
+        transition: top 0.3s ease-out;
+    }
+
+    input{
+        max-width: 100px;
+        text-align: center;
+    }
+    .leftbar{
+        max-width: 300px;
+        margin-top: 10;
+        margin-right: 10px;
+    }
+    .text{
+        padding: 10px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        max-width: 600px;
+        background-color: antiquewhite;
+        margin-top: 60px;
+    }
+        table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 10px;
+                text-align: center;
+            }
+  </style>
 </head>
 <body>
-    Github First First
+    <header class="top-header">Temperature Converter</header>
+    <script src="header.js"></script>
+        <div class="flexbox">
+            <div class="item">
+                <div class="content">
+                    <h3>Kelvin</h3>
+                    <input id="kelvinInput" class="input" type="text">
+                    <div class="b1" id="kelvinResult"></div>
+                    <p>
+                    <button id="kelvinReset">Reset</button>
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                    <h3>Fahrenheit</h3>
+                    <input id="fahrenheitInput" class="input" type="text">
+                    <div class="b1" id="fahrenheitResult"></div>
+                    <p>
+                    <button id="fahrenheitReset">Reset</button>
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                    <h3>Newton</h3>
+                    <input id="newtonInput" class="input" type="text">
+                    <div class="b1" id="newtonResult"></div>
+                    <p>
+                    <button id="newtonReset">Reset</button>
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                    <h3>Rankine</h3>
+                    <input id="rankkineInput" class="input" type="text">
+                    <div class="b1" id="rankkineResult"></div>
+                    <p>
+                    <button id="rankkinereset">Reset</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+  <script src="calculate temperature.js"></script>
 </body>
 </html>
